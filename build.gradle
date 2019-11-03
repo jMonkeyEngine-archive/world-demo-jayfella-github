@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'com.jayfella'
+version '1.0'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    maven { url 'https://jitpack.io' }
+}
+
+project.ext {
+    jmeVer = "3.3.0-alpha5"
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+
+    
+    implementation "org.jmonkeyengine:jme3-core:$jmeVer"
+    implementation "org.jmonkeyengine:jme3-desktop:$jmeVer"
+
+    // implementation "org.jmonkeyengine:jme3-lwjgl:$jmeVer"
+    implementation "org.jmonkeyengine:jme3-lwjgl3:$jmeVer"
+    implementation "org.jmonkeyengine:jme3-effects:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-jogg:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-plugins:$jmeVer"
+
+    // implementation "org.jmonkeyengine:jme3-bullet:$jmeVer"
+
+    // implementation "org.jmonkeyengine:jme3-bullet-native:$jmeVer"
+    // implementation "org.jmonkeyengine:jme3-jbullet:$jmeVer"
+
+    implementation "com.jayfella:jme-fastnoise:1.0.1"
+
+    // implementation "com.jayfella:jme-world-pager:1.0.1"
+    // implementation "com.jayfella:jme-position-plotters:1.0.0"
+    // implementation 'com.github.jayfella:jme-position-plotters:-SNAPSHOT'
+    // implementation 'com.github.jayfella:jme-world-pager:-SNAPSHOT'
+    implementation "com.jayfella:jme-position-plotters:1.0.0"
+    implementation "com.jayfella:jme-world-pager:1.0.1"
+
+    compile "org.codehaus.groovy:groovy-all:2.5.4"
+    implementation "com.simsilica:lemur:1.13.0"
+    implementation "com.simsilica:lemur-proto:1.9.1"
+    implementation "com.simsilica:lemur-props:1.0.1"
+
+}
